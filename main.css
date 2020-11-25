@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, .scene {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  background-color: #111;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scene {
+  perspective: 30cm;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  --padding: 1rem;
+  padding: var(--padding);
+  gap: calc(var(--padding) * 3);
+  border: 10px double cornflowerblue;
+  border-radius: 25px;
+}
+
+.profile canvas {
+  border-radius: 5px;
+}
+
+.profile .bio {
+  width: 20vw;
+}
+
+.profile h3 {
+  color: cornflowerblue;
+}
+
+.profile h1, .profile h3 {
+  line-height: 2.5rem;
+}
+
+.profile p {
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile ul {
+  padding-left: 2rem;
+}
+
+.site-version {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: #888;
+  opacity: 0.5;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media (max-width: 1080px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile .bio {
+    width: 60vw;
+  }
+  .profile .bio * {
+    line-height: auto;
+    line-height: unset;
+  }
+  .profile .photo :first-child {
+    top: -230px !important;
+    left: -100px !important;
+  }
+}

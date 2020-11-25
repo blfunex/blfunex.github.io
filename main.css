@@ -85,3 +85,15 @@ html {
     left: -100px !important;
   }
 }
+
+a {
+  color: cornflowerblue;
+}
+
+a:hover {
+  color: lightskyblue;
+}
+
+a:active {
+  color: royalblue;
+}
